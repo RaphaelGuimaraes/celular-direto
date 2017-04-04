@@ -1,0 +1,12 @@
+<div class="form-steps">
+    <span>Form Steps</span>
+    <ul>
+        <li
+            ng-repeat="step in $ctrl.steps"
+            ng-click="$ctrl.selectStep(step)">
+            <a ng-href="{{step.getRoute()}}">{{$index + 1}} - {{step.title}}</a>
+        </li>
+    </ul>
+
+    <div ng-transclude></div>
+</div>
