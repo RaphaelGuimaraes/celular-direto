@@ -17,7 +17,7 @@ function Step (title, route) {
     this.init(title, route);
 }
 
-function FormStepsController ($scope, $element, $attrs) {
+function FormStepsController ($scope, $element, $attrs, $location) {
     var ctrl = this;
 
     this.steps = [
@@ -25,6 +25,8 @@ function FormStepsController ($scope, $element, $attrs) {
         new Step('Plano de dados', 'package'),
         new Step('Registro', 'register')
     ];
+
+    $scope.currentNavItem = $location.path().replace('/', '');
 }
 
 angular.module('myApp')
@@ -32,8 +34,5 @@ angular.module('myApp')
     .component('formSteps', {
         transclude: true,
         templateUrl: 'components/form-steps/form-steps.html',
-        controller: FormStepsController ,
-        bindings: {
-            platforms: '<'
-        }
+        controller: FormStepsController
     });

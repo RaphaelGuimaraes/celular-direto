@@ -9,6 +9,8 @@ angular.module('myApp.platform', ['ngRoute'])
             $location.path('/package');
         };
 
+        $scope.currentNavItem = 'platform';
+
         $http.get('http://private-59658d-celulardireto2017.apiary-mock.com/plataformas')
             .then(function (response) {
                 $scope.platforms = response.data.plataformas;

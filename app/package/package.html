@@ -1,11 +1,10 @@
-<p>Choose the package</p>
 <form-steps>
-    <ul>
-        <li
-            ng-repeat="dataPackage in packages"
-            ng-click="selectPackage(dataPackage)">
-            <span>{{dataPackage.franquia}}</span>
-            <span>R$ {{dataPackage.valor}}</span>
-        </li>
-    </ul>
+	<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      	<md-button 
+      		ng-repeat="dataPackage in packages" 
+      		ng-click="selectPackage(dataPackage)" 
+      		class="md-raised md-warn">
+      		{{dataPackage.franquia}} R$ {{dataPackage.valor}}
+      	</md-button>
+    </section>
 </form-steps>

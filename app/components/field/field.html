@@ -1,11 +1,13 @@
-<label
-    for="{{$ctrl.label}}"
-    class="field">
-
-    <input
-        id="{{$ctrl.label}}"
-        type="{{$ctrl.type}}"
-        name="{{$ctrl.label}}"
-        placeholder="{{$ctrl.placeholder}}"
-        ng-model="$ctrl.value"/>
-</label>
+<div layout-xs="row">
+	<md-input-container class="md-block" flex-xs>
+	    <label for="{{$ctrl.label}}">{{$ctrl.placeholder}}</label>
+	    <input
+	    	id="{{$ctrl.label}}" 
+	    	name="{{$ctrl.label}}" 
+	    	ng-model="$ctrl.value" 
+	    	type="{{$ctrl.type}}" 
+	    	ng-pattern="{{$ctrl.pattern}}"  
+	    	md-maxlength="{{$ctrl.maxlength}}" 
+	    	required />
+	</md-input-container>
+</div>

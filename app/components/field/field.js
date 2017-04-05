@@ -19,10 +19,11 @@ angular.module('myApp')
     .component('field', {
         transclude: true,
         templateUrl: 'components/field/field.html',
-        controller: FieldController ,
+        controller: FieldController,
         bindings: {
-            label: '<',
+            label: '@?',
             placeholder: '@?',
+            maxlength: '@?',
             type: '@?',
             value: '='
         }
