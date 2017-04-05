@@ -1,0 +1,37 @@
+<p>Register step</p>
+<form-steps>
+    <form
+        ng-submit="submit()">
+        <field
+            label="nome"
+            placeholder="Qual é o seu nome?"
+            value="registerForm.nome">
+        </field>
+
+        <field
+            label="email"
+            placeholder="Qual é o seu e-mail?"
+            value="registerForm.email">
+        </field>
+
+        <field
+            label="nascimento"
+            placeholder="Quando você nasceu? Ex: 10/01/1991"
+            value="registerForm.nascimento">
+        </field>
+
+        <field
+            label="cpf"
+            placeholder="Qual é o seu CPF? Ex: 123.456.789-10"
+            value="registerForm.cpf">
+        </field>
+
+        <field
+            label="telefone"
+            placeholder="Qual é o seu número de telefone?"
+            value="registerForm.telefone">
+        </field>
+
+        <input type="submit">
+    </form>
+</form-steps>

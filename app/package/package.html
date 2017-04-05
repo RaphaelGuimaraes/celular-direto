@@ -1,0 +1,11 @@
+<p>Choose the package</p>
+<form-steps>
+    <ul>
+        <li
+            ng-repeat="dataPackage in packages"
+            ng-click="selectPackage(dataPackage)">
+            <span>{{dataPackage.franquia}}</span>
+            <span>R$ {{dataPackage.valor}}</span>
+        </li>
+    </ul>
+</form-steps>

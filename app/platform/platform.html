@@ -1,7 +1,9 @@
 <h1>Escolha a plataforma</h1>
 <form-steps>
     <ul>
-        <li ng-repeat="platform in platforms">
+        <li
+            ng-repeat="platform in platforms"
+            ng-click="selectPlatform(platform)">
             {{platform.nome}}
         </li>
     </ul>

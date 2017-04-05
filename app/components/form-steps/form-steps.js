@@ -1,6 +1,3 @@
-/**
- * Created by klaus on 04/04/17.
- */
 'use strict';
 
 function Step (title, route) {
@@ -24,7 +21,9 @@ function FormStepsController ($scope, $element, $attrs) {
     var ctrl = this;
 
     this.steps = [
-        new Step('Plataformas', 'platform')
+        new Step('Plataformas', 'platform'),
+        new Step('Plano de dados', 'package'),
+        new Step('Registro', 'register')
     ];
 }
 
