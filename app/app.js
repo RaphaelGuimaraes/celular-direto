@@ -4,11 +4,20 @@
 angular.module('myApp', [
     'ngRoute',
     'myApp.platform',
-    'myApp.view2',
+    'myApp.package',
     'myApp.version'
 ])
 
     .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('');
-        $routeProvider.otherwise({redirectTo: '/platform'});
+        $routeProvider
+            .when('/platform', {
+                templateUrl: 'platform/platform.html',
+                controller: 'PlatformCtrl'
+            })
+            .when('/package', {
+                templateUrl: 'package/package.html',
+                controller: 'PackageCtrl'
+            })
+            .otherwise({redirectTo: '/platform'});
     }]);
