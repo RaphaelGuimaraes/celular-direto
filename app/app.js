@@ -5,6 +5,7 @@ angular.module('myApp', [
     'ngRoute',
     'myApp.platform',
     'myApp.package',
+    'myApp.registerForm',
     'myApp.version'
 ])
 
@@ -18,6 +19,10 @@ angular.module('myApp', [
             .when('/package', {
                 templateUrl: 'package/package.html',
                 controller: 'PackageCtrl'
+            })
+            .when('/register', {
+                templateUrl: 'register-form/register-form.html',
+                controller: 'RegisterFormCtrl'
             })
             .otherwise({redirectTo: '/platform'});
     }]);

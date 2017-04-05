@@ -23,6 +23,7 @@ function FormStepsController ($scope, $element, $attrs) {
     this.steps = [
         new Step('Plataformas', 'platform'),
         new Step('Plano de dados', 'package'),
+        new Step('Registro', 'register')
     ];
 }
 
