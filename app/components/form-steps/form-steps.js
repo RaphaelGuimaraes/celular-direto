@@ -29,7 +29,7 @@ function FormStepsController ($scope, $element, $attrs, $location) {
     $scope.currentNavItem = $location.path().replace('/', '');
 }
 
-angular.module('myApp')
+angular.module('myApp.formSteps', [])
 
     .component('formSteps', {
         transclude: true,

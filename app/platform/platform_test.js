@@ -2,15 +2,18 @@
 
 describe('myApp.platform module', function() {
 
-  beforeEach(module('myApp.platform'));
+  	beforeEach(module('myApp.platform'));
 
-  describe('platform controller', function(){
+  	describe('platform controller', function(){
 
-    it('should ....', inject(function($controller) {
-      //spec body
-      var platformCtrl = $controller('PlatformCtrl');
-      expect(platformCtrl).toBeDefined();
-    }));
+    	it('should ....', inject(function($controller) {
+      		var $scope = {};
 
-  });
+	      	var platformCtrl = $controller('PlatformCtrl', {
+	      		$scope: $scope
+	      	});
+	      
+	      	expect(platformCtrl).toBeDefined();
+    	}));
+  	});
 });

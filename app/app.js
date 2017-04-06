@@ -7,7 +7,9 @@ angular.module('myApp', [
     'myApp.platform',
     'myApp.package',
     'myApp.registerForm',
-    'myApp.version'
+    'myApp.version',
+    'myApp.field',
+    'myApp.formSteps'
 ])
 
     .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
