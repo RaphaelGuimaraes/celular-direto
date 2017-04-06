@@ -9,26 +9,23 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'components/**/*.js',
-      'view*/**/*.js'
+      'platform/*.js',
+      'package/*.js',
+      'register-form/*.js'
     ],
-
     autoWatch: true,
-
+    singleRun: true,
     frameworks: ['jasmine'],
-
     browsers: ['Chrome'],
-
     plugins: [
       'karma-chrome-launcher',
       'karma-firefox-launcher',
       'karma-jasmine',
       'karma-junit-reporter'
     ],
-
     junitReporter: {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
     }
-
   });
 };

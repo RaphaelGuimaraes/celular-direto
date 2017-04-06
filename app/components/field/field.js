@@ -14,7 +14,7 @@ function FieldController ($scope, $element, $attrs) {
     };
 }
 
-angular.module('myApp')
+angular.module('myApp.field', [])
 
     .component('field', {
         transclude: true,
