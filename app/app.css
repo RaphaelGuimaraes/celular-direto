@@ -1,9 +1,4 @@
 /* app css stylesheet */
-* {
-	margin: 0;
-	padding: 0;
-}
-
 html {
 	height: 100%;
 }
@@ -20,50 +15,27 @@ body {
     text-align: center;
 }
 
-h1 {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 1.5em;
-	font-weight: normal;
-	text-transform: uppercase;
-	line-height: 1.5em;
-	background: #DCDCDC;
-	color: #93bae1;
-	margin: 0 0 15px 0;
-}
-
 .form-steps {
 	padding: 20px;
-	min-width: 150px;
-	min-height: 200px;
 	background: #DCDCDC;
 	border-radius: 10px;
-	position: absolute;
-    top: 35%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -95px;
+	margin: 0 15px;
 }
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.form-steps .md-padding {
+	width: 100%;
 }
 
-.menu:before {
-  content: "[";
+.form-steps .md-raised {
+	width: 150px
 }
 
-.menu:after {
-  content: "]";
+md-content .ext-content {
+  	padding: 20px;
+  	margin: 20px;
+  	background-color: #FFF2E0; 
 }
 
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+label {
+	text-align: left;
 }

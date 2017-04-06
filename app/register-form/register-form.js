@@ -22,7 +22,7 @@ angular.module('myApp.registerForm', ['ngRoute'])
             $scope.registerForm = {
                 nome: '',
                 email: '',
-                dataNascimento: '',
+                nascimento: '',
                 cpf: '',
                 telefone: ''
             };

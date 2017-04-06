@@ -1,37 +1,52 @@
-<p>Register step</p>
 <form-steps>
-    <form
-        ng-submit="submit()">
-        <field
-            label="nome"
-            placeholder="Qual é o seu nome?"
-            value="registerForm.nome">
-        </field>
+    <md-content layout-padding>
+        <form ng-submit="submit()">
+            <field
+                label="nome"
+                placeholder="Nome"
+                value="registerForm.nome">
+            </field>
 
-        <field
-            label="email"
-            placeholder="Qual é o seu e-mail?"
-            value="registerForm.email">
-        </field>
+            <field
+                label="email"
+                placeholder="Email"
+                type="email"
+                value="registerForm.email">
+            </field>
 
-        <field
-            label="nascimento"
-            placeholder="Quando você nasceu? Ex: 10/01/1991"
-            value="registerForm.nascimento">
-        </field>
+            <!-- <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Enter date</label>
+                    <md-datepicker ng-model="registerForm.nascimento"></md-datepicker>
+                </md-input-container>
+            </div> -->
 
-        <field
-            label="cpf"
-            placeholder="Qual é o seu CPF? Ex: 123.456.789-10"
-            value="registerForm.cpf">
-        </field>
+            <field
+                label="nascimento"
+                placeholder="Data de Nascimento"
+                type="date"
+                value="registerForm.nascimento">
+            </field>
 
-        <field
-            label="telefone"
-            placeholder="Qual é o seu número de telefone?"
-            value="registerForm.telefone">
-        </field>
+            <field
+                label="cpf"
+                placeholder="CPF"
+                maxlength="11" 
+                value="registerForm.cpf">
+            </field>
 
-        <input type="submit">
-    </form>
+            <field
+                label="telefone"
+                placeholder="Telefone"
+                maxlength="11"
+                value="registerForm.telefone">
+            </field>
+
+            <md-button 
+                type="submit"
+                class="md-raised md-warn">
+                SUBMIT
+            </md-button>
+        </form>
+    </md-content>
 </form-steps>
