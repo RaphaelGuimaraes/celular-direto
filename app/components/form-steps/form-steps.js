@@ -1,6 +1,3 @@
-/**
- * Created by klaus on 04/04/17.
- */
 'use strict';
 
 function Step (title, route) {
@@ -20,12 +17,16 @@ function Step (title, route) {
     this.init(title, route);
 }
 
-function FormStepsController ($scope, $element, $attrs) {
+function FormStepsController ($scope, $element, $attrs, $location) {
     var ctrl = this;
 
     this.steps = [
-        new Step('Plataformas', 'platform')
+        new Step('Plataformas', 'platform'),
+        new Step('Plano de dados', 'package'),
+        new Step('Registro', 'register')
     ];
+
+    $scope.currentNavItem = $location.path().replace('/', '');
 }
 
 angular.module('myApp')
@@ -33,8 +34,5 @@ angular.module('myApp')
     .component('formSteps', {
         transclude: true,
         templateUrl: 'components/form-steps/form-steps.html',
-        controller: FormStepsController ,
-        bindings: {
-            platforms: '<'
-        }
+        controller: FormStepsController
     });

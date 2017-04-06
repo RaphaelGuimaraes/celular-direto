@@ -1,12 +1,19 @@
-<div class="form-steps">
-    <span>Form Steps</span>
-    <ul>
-        <li
-            ng-repeat="step in $ctrl.steps"
-            ng-click="$ctrl.selectStep(step)">
-            <a ng-href="{{step.getRoute()}}">{{$index + 1}} - {{step.title}}</a>
-        </li>
-    </ul>
+<div class="form-steps" layout="row" flex-xs>
+    <md-content class="md-padding">
+	    <md-nav-bar 
+	      md-selected-nav-item="currentNavItem"
+	      nav-bar-aria-label="navigation links">
 
-    <div ng-transclude></div>
+			<md-nav-item
+				ng-repeat="step in $ctrl.steps"
+				md-nav-href="{{step.getRoute()}}" name="{{step.route}}">
+				{{step.title}}
+            </md-nav-item>
+
+	    </md-nav-bar>
+	    
+	    <div class="ext-content">
+	     	<div ng-transclude></div>
+	    </div>
+  	</md-content>
 </div>
