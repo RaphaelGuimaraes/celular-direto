@@ -17,11 +17,13 @@ body {
 
 .form-steps {
 	padding: 20px;
-	min-width: 150px;
-	min-height: 200px;
 	background: #DCDCDC;
 	border-radius: 10px;
 	margin: 0 15px;
+}
+
+.form-steps .md-padding {
+	width: 100%;
 }
 
 .form-steps .md-raised {
