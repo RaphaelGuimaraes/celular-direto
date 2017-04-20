@@ -14,8 +14,7 @@ function FieldController ($scope, $element, $attrs) {
     };
 }
 
-angular.module('myApp')
-
+angular.module('cd.app')
     .component('field', {
         transclude: true,
         templateUrl: 'components/field/field.html',

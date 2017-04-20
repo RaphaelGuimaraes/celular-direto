@@ -1,10 +1,10 @@
 <form-steps>
 	<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
       	<md-button 
-      		ng-repeat="dataPackage in packages" 
-      		ng-click="selectPackage(dataPackage)" 
+      		ng-repeat="package in pck.packages" 
+      		ng-click="pck.selectPackage(package)" 
       		class="md-raised md-warn">
-      		{{dataPackage.franquia}} R$ {{dataPackage.valor}}
+      		{{package.franquia}} R$ {{package.valor}}
       	</md-button>
     </section>
 </form-steps>

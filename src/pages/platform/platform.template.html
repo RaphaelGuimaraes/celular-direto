@@ -1,8 +1,8 @@
 <form-steps currentNavItem="currentNavItem">
     <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
       	<md-button 
-      		ng-repeat="platform in platforms" 
-      		ng-click="selectPlatform(platform)" 
+      		ng-repeat="platform in ptf.platforms" 
+      		ng-click="ptf.selectPlatform(platform)" 
       		class="md-raised md-warn">
       		{{platform.nome}}
       	</md-button>

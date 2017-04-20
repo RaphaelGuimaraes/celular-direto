@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="cd.app">
 <head>
     <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My AngularJS App</title>
+    <title>Celular Direto | FrontEnd Developer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="assets/css/app.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-    <img class="logo" src="./images/logo.png">
+    <img class="logo" src="/assets/imgs/logo.png">
     
     <div ng-view></div>
 
@@ -23,14 +23,25 @@
 <script src="/bower_components/angular-aria/angular-aria.js"></script>
 <script src="/bower_components/angular-animate/angular-animate.js"></script>
 <script src="/bower_components/angular-material/angular-material.js"></script>
-<script src="app.js"></script>
-<script src="platform/platform.js"></script>
-<script src="package/package.js"></script>
-<script src="register-form/register-form.js"></script>
-<script src="components/version/version.js"></script>
-<script src="components/version/version-directive.js"></script>
-<script src="components/version/interpolate-filter.js"></script>
+<!-- App -->
+<script src="app/app.js"></script>
+<!-- Platform -->
+<script src="pages/platform/platform.controller.js"></script>
+<script src="pages/platform/platform.route.js"></script>
+<script src="pages/platform/platform.service.js"></script>
+<!-- Package -->
+<script src="pages/package/package.controller.js"></script>
+<script src="pages/package/package.route.js"></script>
+<script src="pages/package/package.service.js"></script>
+<!-- RegisterForm -->
+<script src="pages/register-form/register-form.controller.js"></script>
+<script src="pages/register-form/register-form.route.js"></script>
+<!-- Components -->
 <script src="components/form-steps/form-steps.js"></script>
 <script src="components/field/field.js"></script>
+<!-- Version -->
+<!--<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>-->
 </body>
 </html>

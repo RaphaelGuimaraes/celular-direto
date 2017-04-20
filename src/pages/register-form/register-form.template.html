@@ -1,23 +1,23 @@
 <form-steps>
     <md-content layout-padding>
-        <form ng-submit="submit()">
+        <form ng-submit="rgf.submit()">
             <field
                 label="nome"
                 placeholder="Nome"
-                value="registerForm.nome">
+                value="rgf.nome">
             </field>
 
             <field
                 label="email"
                 placeholder="Email"
                 type="email"
-                value="registerForm.email">
+                value="rgf.email">
             </field>
 
             <!-- <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Enter date</label>
-                    <md-datepicker ng-model="registerForm.nascimento"></md-datepicker>
+                    <md-datepicker ng-model="rgf.nascimento"></md-datepicker>
                 </md-input-container>
             </div> -->
 
@@ -25,21 +25,21 @@
                 label="nascimento"
                 placeholder="Data de Nascimento"
                 type="date"
-                value="registerForm.nascimento">
+                value="rgf.nascimento">
             </field>
 
             <field
                 label="cpf"
                 placeholder="CPF"
                 maxlength="11" 
-                value="registerForm.cpf">
+                value="rgf.cpf">
             </field>
 
             <field
                 label="telefone"
                 placeholder="Telefone"
                 maxlength="11"
-                value="registerForm.telefone">
+                value="rgf.telefone">
             </field>
 
             <md-button 
