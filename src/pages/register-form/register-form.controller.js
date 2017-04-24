@@ -1,17 +1,17 @@
 (function() {
     'use strict';
 
-    angular.module('cd.app')
+    angular.module('cd.app.registerForm')
         .controller('RegisterFormController', RegisterFormController);
     
     /* @ngInject */
-    function RegisterFormController ($location) {
+    function RegisterFormController ($location, FormStepsService) {
         var $ctrl = this;
 
         $ctrl.selectedPlatform = JSON.parse(localStorage.getItem('selectedPlatform'));
         $ctrl.selectedPackage = JSON.parse(localStorage.getItem('selectedPackage'));
 
-        if (!$ctrl.selectedPlatform && !$ctrl.selectedPackage) {          
+        if (FormStepsService.currentStep < FormStepsService.REGISTER) {
             $location.path('/package');
         } else {
             _init();

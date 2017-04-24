@@ -1,18 +1,18 @@
 (function () {
     'use strict';
 
-    angular.module('cd.app')
+    angular.module('cd.app.package')
         .controller('PackageController', PackageController);
 
     /* @ngInject */
-    function PackageController ($location, PackageService) {
+    function PackageController ($location, PackageService, FormStepsService) {
         var $ctrl = this;
 
         $ctrl.packages;
         $ctrl.selectPackage = selectPackage;
         $ctrl.selectedPlatform = JSON.parse(localStorage.getItem('selectedPlatform'));
 
-        if (!$ctrl.selectedPlatform) {
+        if (FormStepsService.currentStep < FormStepsService.PACKAGE) {
             $location.path('/platform');
         } else {
             _init();
@@ -34,6 +34,7 @@
 
         function selectPackage (data) {
             localStorage.setItem('selectedPackage', JSON.stringify(data));
+            FormStepsService.setStep(FormStepsService.REGISTER);
             $location.path('/register');
         };
     };

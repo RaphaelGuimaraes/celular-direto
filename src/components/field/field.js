@@ -1,29 +1,39 @@
-'use strict';
+(function () {
 
-function FieldController ($scope, $element, $attrs) {
-    var ctrl = this;
+    'use strict';
 
-    ctrl.$onInit = function () {
-        if (!ctrl.type) {
-            ctrl.type = 'text';
-        }
+    angular.module('cd.app.field', [])
+        .component('cdField', fieldConfig());
 
-        if (!ctrl.placeholder) {
-            ctrl.placeholder = ctrl.label ? ctrl.label : '';
-        }
+    function FieldController ($scope, $element, $attrs) {
+        var $ctrl = this;
+
+        $ctrl.onInit = onInit;
+
+        function onInit () {
+            if (!$ctrl.type) {
+                $ctrl.type = 'text';
+            }
+
+            if (!$ctrl.placeholder) {
+                $ctrl.placeholder = $ctrl.label ? $ctrl.label : '';
+            }
+        };
     };
-}
 
-angular.module('cd.app')
-    .component('field', {
-        transclude: true,
-        templateUrl: 'components/field/field.html',
-        controller: FieldController,
-        bindings: {
-            label: '@?',
-            placeholder: '@?',
-            maxlength: '@?',
-            type: '@?',
-            value: '='
-        }
-    });
+    function fieldConfig () {
+        return {
+            transclude: true,
+            templateUrl: 'components/field/field.html',
+            controller: FieldController,
+            bindings: {
+                label: '@?',
+                placeholder: '@?',
+                maxlength: '@?',
+                type: '@?',
+                value: '='
+            }
+        };
+    };
+
+})();

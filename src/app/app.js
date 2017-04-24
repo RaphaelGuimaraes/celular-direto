@@ -2,8 +2,15 @@
     'use strict';
 
     angular.module('cd.app', [
+        /* Angular modules */
         'ngRoute',
-        'ngMaterial'
+        'ngMaterial',
+        /* Shared modules */
+        'cd.app.platform',
+        'cd.app.package',
+        'cd.app.registerForm',
+        /* Shared components */
+        'cd.app.formSteps'
     ])
         .config(appConfig);
 

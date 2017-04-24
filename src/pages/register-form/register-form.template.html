@@ -1,46 +1,39 @@
-<form-steps>
+<cd-form-steps>
     <md-content layout-padding>
         <form ng-submit="rgf.submit()">
-            <field
+            <cd-field
                 label="nome"
                 placeholder="Nome"
                 value="rgf.nome">
-            </field>
+            </cd-field>
 
-            <field
+            <cd-field
                 label="email"
                 placeholder="Email"
                 type="email"
                 value="rgf.email">
-            </field>
+            </cd-field>
 
-            <!-- <div layout-gt-sm="row">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Enter date</label>
-                    <md-datepicker ng-model="rgf.nascimento"></md-datepicker>
-                </md-input-container>
-            </div> -->
-
-            <field
+            <cd-field
                 label="nascimento"
                 placeholder="Data de Nascimento"
                 type="date"
                 value="rgf.nascimento">
-            </field>
+            </cd-field>
 
-            <field
+            <cd-field
                 label="cpf"
                 placeholder="CPF"
                 maxlength="11" 
                 value="rgf.cpf">
-            </field>
+            </cd-field>
 
-            <field
+            <cd-field
                 label="telefone"
                 placeholder="Telefone"
                 maxlength="11"
                 value="rgf.telefone">
-            </field>
+            </cd-field>
 
             <md-button 
                 type="submit"
@@ -49,4 +42,4 @@
             </md-button>
         </form>
     </md-content>
-</form-steps>
+</cd-form-steps>

@@ -1,12 +1,11 @@
 (function () {
     'use strict';
 
-    angular.module('cd.app')
+    angular.module('cd.app.platform')
         .controller('PlatformController', PlatformController);
 
-    PlatformController.$inject = ['$location', 'PlatformService'];
-
-    function PlatformController ($location, PlatformService) {
+    /* @ngInject */
+    function PlatformController ($location, PlatformService, FormStepsService) {
         var $ctrl = this;
 
         $ctrl.platforms;
@@ -31,8 +30,11 @@
 
         function selectPlatform (platform) {
             localStorage.setItem('selectedPlatform', JSON.stringify(platform));
+            FormStepsService.setStep(FormStepsService.PACKAGE);
+            console.log(FormStepsService.getStep());
             $location.path('/package');
         };
-    }
+
+    };
 
 })();

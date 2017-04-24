@@ -1,11 +1,10 @@
 (function () {
     'use strict';
 
-    angular.module('cd.app')
+    angular.module('cd.app.package')
         .factory('PackageService', PackageService);
 
-    PackageService.$inject = ['$http'];
-
+    /* @ngInject */
     function PackageService ($http) {
         var service = {
                 getPackages: getPackages
