@@ -31,7 +31,6 @@
         function selectPlatform (platform) {
             localStorage.setItem('selectedPlatform', JSON.stringify(platform));
             FormStepsService.setStep(FormStepsService.PACKAGE);
-            console.log(FormStepsService.getStep());
             $location.path('/package');
         };
 

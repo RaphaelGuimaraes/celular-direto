@@ -29,7 +29,7 @@
         this.init(title, route);
     };
 
-    function FormStepsController ($scope, $element, $attrs, $location, FormStepsService) {
+    function FormStepsController ($scope, $element, $attrs, $location) {
         var $ctrl = this;
 
         $ctrl.currentNavItem = $location.path().replace('/', '');
