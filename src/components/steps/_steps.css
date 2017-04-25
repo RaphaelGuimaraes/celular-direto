@@ -1,0 +1,14 @@
+.steps {
+    padding: 20px;
+	background: #DCDCDC;
+	border-radius: 10px;
+	margin: 0 15px;
+}
+
+.steps > .md-padding {
+	width: 100%;
+}
+
+.steps .md-raised {
+	width: 150px
+}

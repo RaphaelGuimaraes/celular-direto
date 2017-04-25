@@ -5,13 +5,13 @@
         .controller('RegisterFormController', RegisterFormController);
     
     /* @ngInject */
-    function RegisterFormController ($location, FormStepsService) {
+    function RegisterFormController ($location, StepsService) {
         var $ctrl = this;
 
         $ctrl.selectedPlatform = JSON.parse(localStorage.getItem('selectedPlatform'));
         $ctrl.selectedPackage = JSON.parse(localStorage.getItem('selectedPackage'));
 
-        if (FormStepsService.currentStep < FormStepsService.REGISTER) {
+        if (StepsService.currentStep < StepsService.REGISTER) {
             $location.path('/package');
         } else {
             _init();

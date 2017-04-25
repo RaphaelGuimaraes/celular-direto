@@ -10,7 +10,7 @@
         'cd.app.package',
         'cd.app.registerForm',
         /* Shared components */
-        'cd.app.formSteps'
+        'cd.app.steps'
     ])
         .config(appConfig);
 

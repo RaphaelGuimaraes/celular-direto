@@ -1,25 +1,23 @@
 'use strict';
 
-describe('cd.app.package', function () {
+describe('Package module', function () { 
 
-	// beforeEach(module('cd.app.package', ['ngRoute']));
 	beforeEach(function () {
 		module('ngRoute');
 		module('cd.app.package');
 	});
 
-	var $controller;
+	var controller;
 
-	beforeEach(inject(function (_$controller_) {
+	beforeEach(inject(function ($controller) {
 		// The injector unwraps the underscores (_) from around the parameter names when matching
-		$controller = _$controller_;
+		controller = $controller('PackageController', {});
 	}));
 
-	describe('PackageController', function () {
+	// describe('PackageController', function () {
 		it('should instatiate', function () {
-			var $scope = {};
-			var pckCtrl = $controller('PackageController', { $scope: $scope });
-			expect(pckCtrl).toBeDefined();
+			console.log(controller);
+			expect(controller.pck).toBeDefined();
 		});
-	});
+	// });
 });

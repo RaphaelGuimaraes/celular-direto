@@ -5,14 +5,14 @@
         .controller('PackageController', PackageController);
 
     /* @ngInject */
-    function PackageController ($location, PackageService, FormStepsService) {
+    function PackageController ($location, PackageService, StepsService) {
         var $ctrl = this;
 
         $ctrl.packages;
         $ctrl.selectPackage = selectPackage;
         $ctrl.selectedPlatform = JSON.parse(localStorage.getItem('selectedPlatform'));
 
-        if (FormStepsService.currentStep < FormStepsService.PACKAGE) {
+        if (StepsService.currentStep < StepsService.PACKAGE) {
             $location.path('/platform');
         } else {
             _init();
@@ -34,7 +34,7 @@
 
         function selectPackage (data) {
             localStorage.setItem('selectedPackage', JSON.stringify(data));
-            FormStepsService.setStep(FormStepsService.REGISTER);
+            StepsService.setStep(StepsService.REGISTER);
             $location.path('/register');
         };
     };

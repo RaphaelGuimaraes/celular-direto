@@ -1,0 +1,10 @@
+body {
+	background: url(../imgs/background.jpg) repeat-y center top;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+}
+
+label {
+	text-align: left;
+}

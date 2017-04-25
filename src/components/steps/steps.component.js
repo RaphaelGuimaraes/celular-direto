@@ -1,14 +1,14 @@
 (function () {
     'use strict';
 
-    angular.module('cd.app.formSteps', [])
-        .component('cdFormSteps', formStepsConfig());
+    angular.module('cd.app.steps', [])
+        .component('cdSteps', stepsConfig());
 
-    function formStepsConfig () {
+    function stepsConfig () {
         return {
             transclude: true,
-            templateUrl: 'components/form-steps/form-steps.html',
-            controller: FormStepsController
+            templateUrl: 'components/steps/steps.template.html',
+            controller: StepsController
         };
     };
 
@@ -29,7 +29,7 @@
         this.init(title, route);
     };
 
-    function FormStepsController ($scope, $element, $attrs, $location) {
+    function StepsController ($scope, $element, $attrs, $location) {
         var $ctrl = this;
 
         $ctrl.currentNavItem = $location.path().replace('/', '');

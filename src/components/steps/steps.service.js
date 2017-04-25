@@ -1,10 +1,10 @@
 (function () {
     'use strict';
     
-    angular.module('cd.app.formSteps')
-        .factory('FormStepsService', FormStepsService);
+    angular.module('cd.app.steps')
+        .factory('StepsService', StepsService);
 
-    function FormStepsService() {
+    function StepsService() {
         var service = {
             PLATFORM: 0,
             PACKAGE: 1,

@@ -5,7 +5,7 @@
         .controller('PlatformController', PlatformController);
 
     /* @ngInject */
-    function PlatformController ($location, PlatformService, FormStepsService) {
+    function PlatformController ($location, PlatformService, StepsService) {
         var $ctrl = this;
 
         $ctrl.platforms;
@@ -30,7 +30,7 @@
 
         function selectPlatform (platform) {
             localStorage.setItem('selectedPlatform', JSON.stringify(platform));
-            FormStepsService.setStep(FormStepsService.PACKAGE);
+            StepsService.setStep(StepsService.PACKAGE);
             $location.path('/package');
         };
 
