@@ -2,16 +2,15 @@
 module.exports = function(config) {
   config.set({
 
-    basePath: './app',
+    basePath: './src',
 
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
+      'app/*.js',
       'components/**/*.js',
-      'platform/*.js',
-      'package/*.js',
-      'register-form/*.js'
+      'pages/**/*.js'
     ],
     autoWatch: true,
     singleRun: true,
